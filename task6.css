@@ -109,6 +109,7 @@ section {
 }
 
 h2 {
+    text-transform: uppercase;
     font-size: 22px;
     line-height: 35px;
     text-decoration: underline;
@@ -264,6 +265,7 @@ h3 {
 
 #left3-head {
     float: left;
+    text-transform: uppercase;
     text-indent: 150px;
     font-size: 42px;
     color: #11456b;
@@ -415,6 +417,7 @@ h3 {
 
 #o-right {
     float: left;
+    text-transform: uppercase;
     color: #FFF;
     font-size: 16px;
     font-style: italic;
@@ -431,17 +434,20 @@ h3 {
     width: 160px;
     position: relative;
     float: right;
-    padding: 20px 10px;
+    padding: 20px 5px;
+    margin-right: 10px;
 }
 
-#right3-textblock-quote p {
+#right3-textblock-quote q {
+    position: absolute;
     font-size: 14px;
     color: #5a5a5b;
     line-height: 24px;
-    text-indent: 35px;
+    text-indent: 34px;
 }
 
-#right3-textblock-quote label {
+#right3-textblock-quote q::before,
+#right3-textblock-quote q::after {
     float: right;
     position: absolute;
     font-family: Arial;
@@ -449,14 +455,16 @@ h3 {
     color: #d45d5c;
 }
 
-#upper-quote {
-    left: 8px;
-    top: 0;
+#right3-textblock-quote q::before {
+    content: '\201C';
+    left: -40px;
+    top: 20px;
 }
 
-#lower-quote {
+#right3-textblock-quote q::after {
+    content: '\201D';
     right: 20px;
-    bottom: -40px;
+    bottom: -25px;
 }
 
 footer {
